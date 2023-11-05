@@ -1,0 +1,32 @@
+<div class="row authentication mx-0 body">
+  <div class="offset-lg-3 offset-md-3 col-xxl-6 col-xl-6 col-lg-12">
+    <div class="row justify-content-center align-items-center h-100">
+      <div class="col-xxl-8 col-xl-7 col-lg-7 col-md-7 col-sm-8 col-12">
+        <div class="p-5 card">
+          <p class="h5 text-light fw-semibold mb-2">Sign In</p>
+          <p class=" text-light op-7 fw-normal">Welcome Master Admin !</p>
+          <div class="text-center mt-2 mb-5 authentication-barrier"> <span></span> </div>
+          <div class="row gy-3">
+            <div class="col-xl-12 mt-0"> <label for="signin-username" class="form-label text-light">User Name</label>
+              <input type="text" class="form-control form-control-lg" id="signin-username" >
+            </div>
+            <div class="col-xl-12 mb-3"> <label for="signin-password" class="form-label text-light d-block">Password
+              <!-- <a class="float-end text-danger">Forget password ?</a> -->
+              </label>
+              <div class="input-group"> <input type="text" class="form-control form-control-lg" id="signin-password"
+                  > <button class="btn btn-light" type="button"
+                  onclick="createpassword('signin-password',this)" id="button-addon2"><i
+                    class="align-middle ri-eye-line"></i></button> </div>
+              <div class="mt-2">
+                <div class="form-check"> <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                  <label class="form-check-label text-light fw-normal" for="defaultCheck1"> Remember password ? </label>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-12 d-grid mt-2"> <a routerLink='/master/dashboard' class="btn btn-lg btn-primary">Sign In</a> </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

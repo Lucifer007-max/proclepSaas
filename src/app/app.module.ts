@@ -3,49 +3,35 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MasterAdminRoutingModule } from './master-admin/materadmin-routing.module';
-import { SuperAdminRoutingModule } from './super-admin/supreradmin-routing.module';
-import { UserRoutingModule } from './user/user-routing.module';
-import { UserComponent } from './user/user.component';
-import {
-  NgxUiLoaderModule,
-  NgxUiLoaderConfig,
-  SPINNER,
-  POSITION,
-  PB_DIRECTION,
-  NgxUiLoaderHttpModule,
-  NgxUiLoaderRouterModule,
-} from "ngx-ui-loader";
-import { HttpClientModule } from '@angular/common/http';
-
-const ngxUiLoaderConfig: NgxUiLoaderConfig = {
-  bgsColor: "red",
-  bgsPosition: POSITION.bottomCenter,
-  bgsSize: 40,
-  bgsType: SPINNER.rectangleBounce, // background spinner type
-  fgsType: SPINNER.chasingDots, // foreground spinner type
-  pbDirection: PB_DIRECTION.leftToRight, // progress bar direction
-  pbThickness: 5, // progress bar thickness
-};
-
+// Master Admin Component
+import { MasterAdminComponent } from './master-admin/master-admin.component';
+import { DashboardComponent } from './master-admin/dashboard/dashboard.component';
+import { MasterRoutingModule } from './master-admin/master-routing.module';
+import { LoginComponent } from './master-admin/login/login.component';
+// Client Component
+import { ClientComponent } from './client/client.component';
+import { HomeComponent } from './client/home/home.component';
+import { ClientRoutingModule } from './client/client-routing.module';
+import { ClientLoginComponent } from './client/login/login.component';
+import { SubAdminComponent } from './sub-admin/sub-admin.component';
+import { SubAdminRoutingModule } from './sub-admin/sub-admin-routing.module';
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MasterAdminComponent,
+    DashboardComponent,
+    ClientComponent,
+    HomeComponent,
+    LoginComponent,
+    ClientLoginComponent,
+    SubAdminComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    // Core Routing Module
-    MasterAdminRoutingModule,
-    SuperAdminRoutingModule,
-    UserRoutingModule,
-    HttpClientModule, // import HttpClientModule
-    NgxUiLoaderModule, // import NgxUiLoaderModule
-    NgxUiLoaderHttpModule,
-    NgxUiLoaderModule, // import NgxUiLoaderModule
-    NgxUiLoaderRouterModule,
-    NgxUiLoaderModule.forRoot(ngxUiLoaderConfig),
-
+    ClientRoutingModule,
+    MasterRoutingModule,
+    SubAdminRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
